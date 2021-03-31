@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfRectangle", "WpfRectangl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfButtonBrush", "WpfButtonBrush\WpfButtonBrush.csproj", "{72A8CECA-9ABE-4965-8309-69138E400942}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfEllipse", "WpfEllipse\WpfEllipse.csproj", "{98B856F8-E9FD-4938-AA87-14459D3D79CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{72A8CECA-9ABE-4965-8309-69138E400942}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72A8CECA-9ABE-4965-8309-69138E400942}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72A8CECA-9ABE-4965-8309-69138E400942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B856F8-E9FD-4938-AA87-14459D3D79CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B856F8-E9FD-4938-AA87-14459D3D79CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B856F8-E9FD-4938-AA87-14459D3D79CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B856F8-E9FD-4938-AA87-14459D3D79CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

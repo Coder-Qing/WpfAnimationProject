@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfEllipse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfEllipse"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--绘制一个球体，球体的轮廓是正圆（Circle），Width与Height相等的椭圆即是正圆；球体的光影效果使用径向渐变实现。XAML代码如下-->
+    <Grid>
+        <Ellipse Stroke="Gray" Width="140" Height="140" Cursor="Hand" ToolTip="A Ball">
+            <Ellipse.Fill>
+                <!--GradientOrigin获取或设置用于定义渐变开始的二维焦点的位置。-->
+                <RadialGradientBrush GradientOrigin="0.2,0.8" RadiusX="0.75" RadiusY="0.75">
+                    <RadialGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <!--RotateTransform 在 二维 x-y 坐标系统中围绕指定点顺时针旋转某个对象。-->
+                            <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </RadialGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                    <GradientStop Color="#FF444444" Offset="0.66"/>
+                    <GradientStop Color="#FF999999" Offset="1"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+    </Grid>
+</Window>
