@@ -10,7 +10,10 @@
     <Grid>
         <Ellipse Stroke="Gray" Width="140" Height="140" Cursor="Hand" ToolTip="A Ball">
             <Ellipse.Fill>
-                <!--GradientOrigin获取或设置用于定义渐变开始的二维焦点的位置。-->
+                <!--GradientOrigin获取或设置用于定义渐变开始的二维焦点的位置。
+                    RadiusX 获取或设置径向渐变的最外面圆的水平半径。
+                    RadiusY 获取或设置径向渐变的最外面圆的垂直半径。
+                    开始坐标是0.2，0.8 然后将其反转了90度-->
                 <RadialGradientBrush GradientOrigin="0.2,0.8" RadiusX="0.75" RadiusY="0.75">
                     <RadialGradientBrush.RelativeTransform>
                         <TransformGroup>
