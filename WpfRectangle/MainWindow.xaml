@@ -5,8 +5,80 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfRectangle"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="394.452" Width="597.761">
+    <!--Brush是个抽象类，只能用Brush派生类的实例为Fill属性赋值，常用的Brush类型有：
+            SolidColorBrush：实心画刷，在XAML中可以使用颜色名称字符串（如Red、Blue）直接赋值。
+            LinearGradientBrush：线性渐变画刷，色彩沿设定的直线方向、按设定的变化点进行渐变。
+            RadialGradientBrush：径向渐变画刷，色彩沿半径的方向、按设定的变化点进行渐变，形成圆形填充。
+            ImageBrush：使用图片（Image）作为填充内容。
+            DrawingBrush：使用矢量图（Vector）和位图（Bitmap）作为填充内容。
+            VisualBrush：每个控件的可视化形象可以通过Visual类的方法获得（Visual->FrameworkElement），
+                        获得可视化的形象后可以用VisualBrush这个形象进行填充，如拖拽控件时鼠标松开前的控件“幻影”。-->
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="160"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="180"/>
+        </Grid.ColumnDefinitions>
+        <!--实心填充-->
+        <Rectangle Grid.Column="0" Grid.Row="0" Stroke="Black" Fill="LightBlue"/>
+        <!--线性渐变-->
+        <Rectangle Grid.Column="2" Grid.Row="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FFB6F8F1" Offset="0"/>
+                    <GradientStop Color="#FF0082BD" Offset="0.25"/>
+                    <GradientStop Color="#FF95DEFF" Offset="0.6"/>
+                    <GradientStop Color="#FF004F72" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <!--径向渐变-->
+        <Rectangle Grid.Column="4" Grid.Row="0">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFB6F8F1" Offset="0"/>
+                    <GradientStop Color="#FF0082BD" Offset="0.25"/>
+                    <GradientStop Color="#FF95DEFF" Offset="0.6"/>
+                    <GradientStop Color="#FF004F72" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <!--图片填充-->
+        <Rectangle Grid.Column="0" Grid.Row="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Images/girlImage.png" Viewport="0,0,0.5,0.5" TileMode="FlipX"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <!--矢量图填充-->
+        <Rectangle Grid.Column="2" Grid.Row="2">
+            <Rectangle.Fill>
+                <DrawingBrush Viewport="0,0,0.2,0.2" TileMode="Tile">
+                    <DrawingBrush.Drawing>
+                        <GeometryDrawing Brush="LightBlue">
+                            <GeometryDrawing.Geometry>
+                                <EllipseGeometry RadiusX="10" RadiusY="10"/>
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingBrush.Drawing>
+                </DrawingBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Grid.Column="4" Grid.Row="2" StrokeThickness="10">
+            <Rectangle.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="White" Offset="0.3"/>
+                    <GradientStop Color="Blue" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
     </Grid>
 </Window>
