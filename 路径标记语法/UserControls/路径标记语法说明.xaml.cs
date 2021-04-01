@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace 路径标记语法.UserControl
+namespace 路径标记语法.UserControls
 {
     /// <summary>
     /// 路径标记语法说明.xaml 的交互逻辑
