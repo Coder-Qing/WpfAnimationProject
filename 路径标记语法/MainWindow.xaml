@@ -1,0 +1,13 @@
+﻿<Window x:Class="路径标记语法.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:路径标记语法"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--https://www.cnblogs.com/timefiles/archive/2021/03/30/WpfAnimation.html#%E8%B7%AF%E5%BE%84%E6%A0%87%E8%AE%B0%E8%AF%AD%E6%B3%95-->
+    <Grid>
+        
+    </Grid>
+</Window>

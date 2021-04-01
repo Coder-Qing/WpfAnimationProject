@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfEllipse", "WpfEllipse\Wp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPath", "WpfPath\WpfPath.csproj", "{505E7606-9CFC-4CB2-9A4A-C1A8B6009F33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "路径标记语法", "路径标记语法\路径标记语法.csproj", "{EC590DB8-01AD-46AA-AB9F-FA158725C4A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{505E7606-9CFC-4CB2-9A4A-C1A8B6009F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{505E7606-9CFC-4CB2-9A4A-C1A8B6009F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{505E7606-9CFC-4CB2-9A4A-C1A8B6009F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC590DB8-01AD-46AA-AB9F-FA158725C4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC590DB8-01AD-46AA-AB9F-FA158725C4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC590DB8-01AD-46AA-AB9F-FA158725C4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC590DB8-01AD-46AA-AB9F-FA158725C4A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
