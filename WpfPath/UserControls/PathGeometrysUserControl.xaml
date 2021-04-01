@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="WpfPath.UserControls.PathGeometrysUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfPath.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Height="350" Width="340">
+    <Grid>
+        <!--Path的Data属性是Geometry类（抽象类，不可直接使用），可以使用的是Geometry的子类，Geometry的子类包括：
+                LineGeometry：直线几何图形。
+                RectangleGeometry：矩形几何图形。
+                EllipseGeometry：椭圆几何图形。
+                PathGeometry：路径几何图形。
+                StreamGeometry：PathGeometry的轻量级替代品，不支持Binding、动画等功能。
+                CombinedGeometry：由多个基本几何图形联合在一起，形成的单一几何图形。
+                GeometryGroup：由多个基本几何图形组合在一起，形成的几何图形组。
+        区别在于前面介绍的Line、Rectangle、Ellipse类都是可以独立存在的对象，这些*Geometry类只能用于结合成其他几何图形、不能独立存在。-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="160"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160"/>
+            <ColumnDefinition Width="160"/>
+        </Grid.ColumnDefinitions>
+        <!--直线-->
+        <Path Stroke="Blue" StrokeThickness="2" Grid.Row="0" Grid.Column="0">
+            <Path.Data>
+                <LineGeometry StartPoint="20,20" EndPoint="140,140" />
+            </Path.Data>
+        </Path>
+        <!--矩形路径-->
+        <Path Stroke="Orange" Fill="Yellow" Grid.Row="0" Grid.Column="1">
+            <Path.Data>
+                <!--RadiusX  RadiusY 获取或设置椭圆的  X Y 轴半径，用于圆角化矩形的角。-->
+                <RectangleGeometry Rect="20,20,120,120" RadiusX="10" RadiusY="10"/>
+            </Path.Data>
+        </Path>
+        <!--椭圆路径-->
+        <Path Stroke="Green" Fill="LawnGreen" Grid.Row="1" Grid.Column="0">
+            <Path.Data>
+                <EllipseGeometry Center="80,80" RadiusX="60" RadiusY="40"/>
+            </Path.Data>
+        </Path>
+        <!--自定义路径（💕最为重要）-->
+        <!--<Path>   WPF绘图的重点在于Path，Path的重点在于PathGeometry
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigure>
+                                <PathFigure.Segments>
+                                    各种线段
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+        
+            Figures是PathGeometry的默认内容属性、Segments是PathFigure的默认内容属性
+            <Path>
+                <Path.Data>
+                    <PathGeometry>                    
+                        <PathFigure>                            
+                            各种线段
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+        -->
+        <Path Stroke="Yellow" Fill="Orange" Grid.Column="1" Grid.Row="1">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="25,140" IsClosed="True">
+                        <LineSegment Point="20,40"/>
+                        <LineSegment Point="40,110"/>
+                        <LineSegment Point="50,20"/>
+                        <LineSegment Point="80,110"/>
+                        <LineSegment Point="110,20"/>
+                        <LineSegment Point="120,110"/>
+                        <LineSegment Point="140,40"/>
+                        <LineSegment Point="135,140"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </Grid>
+</UserControl>

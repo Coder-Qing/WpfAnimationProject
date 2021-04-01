@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="WpfPath.UserControls.SegmentUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfPath.UserControls"
+             mc:Ignorable="d"
+             Height="auto" Width="auto">
+    <!--LineSegment：直线段。
+        ArcSegment：圆弧线段。
+        BezierSegment：三次方贝塞尔曲线段（默认贝塞尔曲线就是指三次曲线，所以Cubic一词被省略）。
+        QuadraticBezierSegment：二次方贝塞尔曲线段。
+        PolyLineSegment：多直线段。
+        PolyBezierSegment：多三次方贝塞尔曲线段。
+        PolyQuadraticBezierSegment：多二次方贝塞尔曲线。
+    注：所有这些线段都没有起点（StartPoint），起点就是前一个线段的终点，而第一个线段的起点则是PathFigure的StartPoint。
+
+    LineSegment最为简单，只需要控制它的Point（终点）即可-->
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Path Stroke="Green" Fill="LawnGreen" StrokeThickness="2" HorizontalAlignment="Center">
+            <Path.Data>
+                <PathGeometry>
+                    <!--左上角为起点-->
+                    <PathFigure IsClosed="True" StartPoint="0,0">
+                        <LineSegment Point="150,0"/>
+                        <LineSegment Point="150,30"/>
+                        <LineSegment Point="90,30"/>
+                        <LineSegment Point="90,150"/>
+                        <LineSegment Point="60,150"/>
+                        <LineSegment Point="60,30"/>
+                        <LineSegment Point="0,30"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="ArcSegment" FontWeight="Bold"/>
+                    <TextBlock Text="用来绘制圆弧："/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="   Point" FontWeight="Bold"/>
+                    <TextBlock Text="属性用来指明圆弧连接的终点；"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="   Size" FontWeight="Bold"/>
+                    <TextBlock Text="属性是完整椭圆的横轴半径和纵轴半径（圆弧截取自椭圆）；"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="   SweepDirection" FontWeight="Bold"/>
+                    <TextBlock Text="属性指明圆弧是顺时针方向还是逆时针方向；"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Text="   ArcSegmentIsLargeArc" FontWeight="Bold"/>
+                    <TextBlock Text="属性用于指明是否使用大弧去连接（如果椭圆上的两点位置不对称，那么这两点间的圆弧就会分为大弧和小弧）；"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="   RotationAngle" FontWeight="Bold"/>
+                    <TextBlock Text="属性用来指明圆弧母椭圆的旋转角度。"/>
+                </StackPanel>
+            </StackPanel>
+            <Image Source="{StaticResource IMG_ArcSegment}" Width="700" Grid.Row="1"/>
+        </Grid>
+    </Grid>
+</UserControl>

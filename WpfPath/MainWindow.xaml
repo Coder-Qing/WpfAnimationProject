@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfPath.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPath"
+        xmlns:uc="clr-namespace:WpfPath.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" SizeToContent="WidthAndHeight">
+    <Grid>
+        <!--https://www.cnblogs.com/timefiles/archive/2021/03/30/WpfAnimation.html#%E8%B7%AF%E5%BE%84%EF%BC%88path%EF%BC%89-->
+        <!--路径（Path）完全可以替代其他几种图形，可以将直线、圆弧、贝塞尔曲线等基本元素结合进来，形成更复杂的图形。
+            路径最重要的一个属性是Data，Data的数据类型是Geometry（几何图形），使用这个属性将一些基本的线段拼接起来、形成复杂的图形，赋值的语法有两种：
+                标签式的标准语法
+                专门用于绘制几何图形的“路径标记语法”-->
+        <uc:SegmentUserControl/>
+
+    </Grid>
+</Window>
