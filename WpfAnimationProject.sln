@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPath", "WpfPath\WpfPath.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "路径标记语法", "路径标记语法\路径标记语法.csproj", "{EC590DB8-01AD-46AA-AB9F-FA158725C4A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "使用Path剪裁界面元素", "使用Path剪裁界面元素\使用Path剪裁界面元素.csproj", "{214BD273-3388-40E6-BB88-D5014CF94A0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{EC590DB8-01AD-46AA-AB9F-FA158725C4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC590DB8-01AD-46AA-AB9F-FA158725C4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC590DB8-01AD-46AA-AB9F-FA158725C4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{214BD273-3388-40E6-BB88-D5014CF94A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214BD273-3388-40E6-BB88-D5014CF94A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214BD273-3388-40E6-BB88-D5014CF94A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214BD273-3388-40E6-BB88-D5014CF94A0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
