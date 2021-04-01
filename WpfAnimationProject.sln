@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "路径标记语法", "路�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "使用Path剪裁界面元素", "使用Path剪裁界面元素\使用Path剪裁界面元素.csproj", "{214BD273-3388-40E6-BB88-D5014CF94A0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTransform_图形的变形", "WpfTransform_图形的变形\WpfTransform_图形的变形.csproj", "{17DC59B5-ED59-4D75-82EA-45974313F96F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{214BD273-3388-40E6-BB88-D5014CF94A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{214BD273-3388-40E6-BB88-D5014CF94A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{214BD273-3388-40E6-BB88-D5014CF94A0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17DC59B5-ED59-4D75-82EA-45974313F96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DC59B5-ED59-4D75-82EA-45974313F96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DC59B5-ED59-4D75-82EA-45974313F96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DC59B5-ED59-4D75-82EA-45974313F96F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
