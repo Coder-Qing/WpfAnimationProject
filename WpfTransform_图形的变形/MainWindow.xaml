@@ -6,6 +6,69 @@
         xmlns:local="clr-namespace:WpfTransform_图形的变形"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <!--https://www.cnblogs.com/timefiles/archive/2021/03/30/WpfAnimation.html#%E5%9B%BE%E5%BD%A2%E7%9A%84%E5%8F%98%E5%BD%A2-->
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <StackPanel.Style>
+                <Style>
+                    <Setter Property="TextBlock.LineHeight" Value="18"/>
+                </Style>
+            </StackPanel.Style>
+            <TextBlock Text="图形的变形" FontWeight="Bold" FontSize="20" Margin="10"/>
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock Text="WPF中的&quot;变形&quot;一词含义很广，"/>
+                <TextBlock Text="尺寸、位置、坐标系比例、旋转角度等的变化都算是变形" FontWeight="Bold"/>
+            </StackPanel>
+            <TextBlock Text="WPF中的变形与UI元素是分开的，如设计一个&quot;向左旋转45度&quot;的变形赋值给不同UI元素的变形控制属性，这些UI元素就都向左旋转45度了。"/>
+            <TextBlock Text="控制变形的属性有两个，分别是："/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="   RenderTransform" FontWeight="Bold"/>
+                <TextBlock Text="：呈现变形，定义在UIElement类中。"/>
+            </StackPanel>
+             <StackPanel Orientation="Horizontal">
+                <TextBlock Text="   LayoutTransform" FontWeight="Bold"/>
+                <TextBlock Text="：布局变形，定义在FrameworkElement类中。"/>
+            </StackPanel> 
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="FrameworkElement派生自UIElement，而控件的基类Control类又派生自FrameworkElement，所以"/>
+                <TextBlock Text="在控件级别两个属性都能看到。" FontWeight="Bold"/>
+            </StackPanel> 
+            <WrapPanel Orientation="Horizontal">
+                <TextBlock Text="这两个属性"/>
+                <TextBlock Text="都是依赖属性，" FontWeight="Bold"/>
+                <TextBlock Text="它们的"/>
+                <TextBlock Text="数据类型都是Transform抽象类，" FontWeight="Bold"/>
+                <TextBlock Text="Transform类的派生类实均可用来为这两个属性赋值。"/>
+            </WrapPanel>
+            <TextBlock Text="Transform抽象类的派生类有如下一些："/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="   MatrixTransform" FontWeight="Bold"/>
+                <TextBlock Text="：矩阵变形，把容纳被变形UI元素的矩形顶点看作一个矩阵进行变形。"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="   Rotate Transform" FontWeight="Bold"/>
+                <TextBlock Text="：旋转变形，以给定的点为旋转中心，以角度为单位进行旋转变形。"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="   ScaleTransform" FontWeight="Bold"/>
+                <TextBlock Text="：坐标系变形，调整被变形元素的坐标系，可产生缩放效果。"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="   SkewTransform" FontWeight="Bold"/>
+                <TextBlock Text="：拉伸变形，可在横向和纵向上对被变形元素进行拉伸。"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="   TranslateTransform" FontWeight="Bold"/>
+                <TextBlock Text="：偏移变形，使被变形元素在横向或纵向上偏移一个给定的值。"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="   TransformGroup" FontWeight="Bold"/>
+                <TextBlock Text="：变形组，可以把多个独立变形合成为一个变形组、产生复合变形效果。"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
