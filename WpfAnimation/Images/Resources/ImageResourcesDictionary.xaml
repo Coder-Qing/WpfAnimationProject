@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfAnimation.Images.Resources">
+    <ImageSource x:Key="IMG_高级动画控制_Image1">/Images/高级动画控制/Image1.png</ImageSource>
+    <ImageSource x:Key="IMG_高级动画控制_Image2">/Images/高级动画控制/Image2.png</ImageSource>
+</ResourceDictionary>

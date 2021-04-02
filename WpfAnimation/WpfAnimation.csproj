@@ -58,6 +58,13 @@
     <Compile Include="UserControls\简单线性动画.xaml.cs">
       <DependentUpon>简单线性动画.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\高级动画控制.xaml.cs">
+      <DependentUpon>高级动画控制.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Images\Resources\ImageResourcesDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +78,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControls\简单线性动画.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\高级动画控制.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,5 +113,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\高级动画控制\Image1.png" />
+    <Resource Include="Images\高级动画控制\Image2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

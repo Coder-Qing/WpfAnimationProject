@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:WpfAnimation"
         xmlns:uc="clr-namespace:WpfAnimation.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" SizeToContent="WidthAndHeight">
     <Grid>
-        <uc:简单线性动画/>
+        <!--<uc:简单线性动画/>-->
+        <uc:高级动画控制/>
     </Grid>
 </Window>

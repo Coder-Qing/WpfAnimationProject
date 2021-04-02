@@ -33,6 +33,7 @@ namespace WpfAnimation.UserControls
             DoubleAnimation daX = new DoubleAnimation();
             DoubleAnimation daY = new DoubleAnimation();
 
+            #region 如果  每次单击按钮，按钮都会从起始位置（窗体的左上角）向窗体右下长宽不超出300像素的矩形内的某点运动
             //指定起点
             daX.From = 0D;
             daY.From = 0D;
@@ -41,6 +42,13 @@ namespace WpfAnimation.UserControls
             Random r = new Random();
             daX.To = r.NextDouble() * 300;
             daY.To = r.NextDouble() * 300;
+            #endregion
+
+            #region 如果每次单击按扭，按钮都向窗体的右下角移动
+            //指定幅度            
+            //daX.By = 100D;
+            //daY.By = 100D;
+            #endregion
 
             //指定时长
             Duration duration = new Duration(TimeSpan.FromMilliseconds(300));

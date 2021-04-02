@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:WpfAnimation.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <!--https://www.cnblogs.com/timefiles/archive/2021/03/30/WpfAnimation.html#%E7%AE%80%E5%8D%95%E7%BA%BF%E6%80%A7%E5%8A%A8%E7%94%BB-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -35,6 +36,12 @@
                 <TextBlock Text="   变化起点（From属性）：" FontWeight="Bold"/>
                 <TextBlock Text="如果没有指定变化起点则以变化目标属性的当前值为起点。"/>
             </StackPanel>
+            <TextBlock Text="注意！"  FontSize="20" FontWeight="Bold" Foreground="Orange"/>
+            <TextBlock Text="用来制作动画的属性必须是依赖属性" FontWeight="Bold"/>
+            <WrapPanel Orientation="Horizontal">
+                <TextBlock Text="UIElement和Animatable两个类都定义有BeginAnimation方法，"/>
+                <TextBlock Text="方法的调用者就是动画要作用的目标对象，两个参数分别指明被作用的依赖属性和设计好的动画。" FontWeight="Bold"/>
+            </WrapPanel>
         </StackPanel>
         <Button Grid.Row="1" Content="Move!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Click="Button_Click">
             <Button.RenderTransform>
