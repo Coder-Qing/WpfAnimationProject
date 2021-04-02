@@ -9,6 +9,7 @@
         Title="MainWindow" SizeToContent="WidthAndHeight">
     <Grid>
         <!--<uc:简单线性动画/>-->
-        <uc:高级动画控制/>
+        <!--<uc:高级动画控制/>-->
+        <uc:关键帧动画/>
     </Grid>
 </Window>
