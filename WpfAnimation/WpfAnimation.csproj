@@ -58,6 +58,9 @@
     <Compile Include="UserControls\关键帧动画.xaml.cs">
       <DependentUpon>关键帧动画.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\特殊的关键帧.xaml.cs">
+      <DependentUpon>特殊的关键帧.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\简单线性动画.xaml.cs">
       <DependentUpon>简单线性动画.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControls\关键帧动画.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\特殊的关键帧.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

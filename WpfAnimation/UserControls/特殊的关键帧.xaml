@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="WpfAnimation.UserControls.特殊的关键帧"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAnimation.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <!--https://www.cnblogs.com/timefiles/archive/2021/03/30/WpfAnimation.html#%E7%89%B9%E6%AE%8A%E7%9A%84%E5%85%B3%E9%94%AE%E5%B8%A7-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="300"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <StackPanel.Style>
+                <Style>
+                    <Setter Property="TextBlock.LineHeight" Value="18"/>
+                </Style>
+            </StackPanel.Style>
+            <WrapPanel>
+                <TextBlock Text="DoubleAnimationUsingKeyFrames" FontWeight="Bold"/>
+                <TextBlock Text="的KeyFrames属性的数据类型是"/>
+                <TextBlock Text="DoubleKeyFrameCollection" FontWeight="Bold"/>
+                <TextBlock Text="，此集合类可接收的元素类型为"/>
+                <TextBlock Text="DoubleKeyFrame。" FontWeight="Bold"/>
+            </WrapPanel>
+            <TextBlock Text="DoubleKeyFrame是一个抽象类，前面使用的LinearDoubleKeyFrame就是它的派生类之一。DoubleKeyFrame的所有派生类如下："/>
+            <WrapPanel>
+                <TextBlock Text="   LinearDoubleKeyFrame：" FontWeight="Bold"/>
+                <TextBlock Text="线性变化关键帧，目标属性值的变化是直线性的、均匀的，即变化速率不变。"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="   DiscreteDoubleKeyFrame：" FontWeight="Bold"/>
+                <TextBlock Text="不连续变化关键帧，目标属性值的变化是跳跃性的、跃迁的。"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="   SplineDoubleKeyFrame：" FontWeight="Bold"/>
+                <TextBlock Text="样条函数式变化关键帧，目标属性值的变化速率是一条贝塞尔曲线。"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="   EasingDoubleKeyFrame：" FontWeight="Bold"/>
+                <TextBlock Text="缓冲式变化关键帧，目标属性值以某种缓冲形式变化。"/>
+            </WrapPanel>
+            <TextBlock/>
+            <WrapPanel>
+                <TextBlock Text="4个派生类中"/>
+                <TextBlock Text="最常用的是SplineDoubleKeyFrame（SplineDoubleKeyFrame可以替代LinearDoubleKeyFrame）" FontWeight="Bold"/>
+                <TextBlock Text="。使用SplineDoubleKeyFrame可以非常方便地制作非匀速动画，因为它"/>
+                <TextBlock Text="使用一条贝塞尔曲线来控制目标属性值的变化速率。" FontWeight="Bold"/>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Text="这条"/>
+                <TextBlock Text="用于控制变化速率的贝塞尔曲线的起点是（0，0）和（1，1），分别映射着目标属性的变化起点和变化终点，意思是目标属性值由0%变化" FontWeight="Bold"/>
+                <TextBlock Text="到100%。" FontWeight="Bold"/>
+            </WrapPanel>
+            <TextBlock/>
+            <WrapPanel>
+                <TextBlock Text="这条贝塞尔曲线有"/>
+                <TextBlock Text="两个控制点ControlPointl和ControlPoint2" FontWeight="Bold"/>
+                <TextBlock Text="，意思是贝塞尔曲线从起点出发先向ControlPoint1的方向前进、再向ControlPoint2的 "/>
+                <TextBlock Text="方向前进、最后到达终点，形成一条平滑的曲线。 "/>
+            </WrapPanel>
+        </StackPanel>
+        <Button Grid.Row="1" Content="Move!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Click="Button_Click">
+            <Button.RenderTransform>
+                <TranslateTransform x:Name="tt" X="0" Y="0"/>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</UserControl>
