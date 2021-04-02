@@ -64,6 +64,9 @@
     <Compile Include="UserControls\简单线性动画.xaml.cs">
       <DependentUpon>简单线性动画.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\路径动画.xaml.cs">
+      <DependentUpon>路径动画.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\高级动画控制.xaml.cs">
       <DependentUpon>高级动画控制.xaml</DependentUpon>
     </Compile>
@@ -92,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\简单线性动画.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\路径动画.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
